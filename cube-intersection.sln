@@ -1,0 +1,80 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Presentation", "1.Presentation", "{5A178E14-AE86-4505-8D1B-EB556C6C7950}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.DistributedServices", "2.DistributedServices", "{5121A86A-35DE-4716-BD53-FB2C5EF19FDB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Application", "3.Application", "{2F06B122-3577-41FD-AE31-882A76956608}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Domain", "4.Domain", "{765E30E9-DAC8-4A55-892D-7734D91E259E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShapeCalculations.WebApi", "ShapeCalculations.WebApi\ShapeCalculations.WebApi.csproj", "{BC609105-9708-47EE-B2BA-45C8EE6ACAED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Data", "5.Data", "{5710E129-20A5-4DF8-B8D0-FD3B7B944243}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShapeCalculations", "ShapeCalculations\ShapeCalculations.csproj", "{7DDC0746-1A10-44D6-8886-07C9AF0AA780}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShapeCalculations.Application.Contracts", "ShapeCalculations.Application.Contracts\ShapeCalculations.Application.Contracts.csproj", "{17F6A524-0EBC-4461-852F-CC866496652E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShapeCalculations.Application.Impl", "ShapeCalculations.Application.Impl\ShapeCalculations.Application.Impl.csproj", "{23689597-03FF-491E-BA69-F92C1194DE31}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShapeCalculations.Models", "ShapeCalculations.Models\ShapeCalculations.Models.csproj", "{BA0CAEAC-EA0C-4AFE-AAF0-3146B14F3775}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeCalculations.Application.Impl.Tests.Unit", "ShapeCalculations.Application.Impl.Tests.Unit\ShapeCalculations.Application.Impl.Tests.Unit.csproj", "{0A67CF12-3F24-4853-BF43-7BD815E0B56D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeCalculations.Tests.Unit", "ShapeCalculations.Tests.Unit\ShapeCalculations.Tests.Unit.csproj", "{023293B3-1BAF-4F7C-866A-64C49BCBE932}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC609105-9708-47EE-B2BA-45C8EE6ACAED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC609105-9708-47EE-B2BA-45C8EE6ACAED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC609105-9708-47EE-B2BA-45C8EE6ACAED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC609105-9708-47EE-B2BA-45C8EE6ACAED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DDC0746-1A10-44D6-8886-07C9AF0AA780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DDC0746-1A10-44D6-8886-07C9AF0AA780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DDC0746-1A10-44D6-8886-07C9AF0AA780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DDC0746-1A10-44D6-8886-07C9AF0AA780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17F6A524-0EBC-4461-852F-CC866496652E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17F6A524-0EBC-4461-852F-CC866496652E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17F6A524-0EBC-4461-852F-CC866496652E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17F6A524-0EBC-4461-852F-CC866496652E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23689597-03FF-491E-BA69-F92C1194DE31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23689597-03FF-491E-BA69-F92C1194DE31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23689597-03FF-491E-BA69-F92C1194DE31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23689597-03FF-491E-BA69-F92C1194DE31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA0CAEAC-EA0C-4AFE-AAF0-3146B14F3775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA0CAEAC-EA0C-4AFE-AAF0-3146B14F3775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA0CAEAC-EA0C-4AFE-AAF0-3146B14F3775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA0CAEAC-EA0C-4AFE-AAF0-3146B14F3775}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A67CF12-3F24-4853-BF43-7BD815E0B56D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A67CF12-3F24-4853-BF43-7BD815E0B56D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A67CF12-3F24-4853-BF43-7BD815E0B56D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A67CF12-3F24-4853-BF43-7BD815E0B56D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{023293B3-1BAF-4F7C-866A-64C49BCBE932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{023293B3-1BAF-4F7C-866A-64C49BCBE932}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{023293B3-1BAF-4F7C-866A-64C49BCBE932}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{023293B3-1BAF-4F7C-866A-64C49BCBE932}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC609105-9708-47EE-B2BA-45C8EE6ACAED} = {5121A86A-35DE-4716-BD53-FB2C5EF19FDB}
+		{7DDC0746-1A10-44D6-8886-07C9AF0AA780} = {765E30E9-DAC8-4A55-892D-7734D91E259E}
+		{17F6A524-0EBC-4461-852F-CC866496652E} = {2F06B122-3577-41FD-AE31-882A76956608}
+		{23689597-03FF-491E-BA69-F92C1194DE31} = {2F06B122-3577-41FD-AE31-882A76956608}
+		{BA0CAEAC-EA0C-4AFE-AAF0-3146B14F3775} = {2F06B122-3577-41FD-AE31-882A76956608}
+		{0A67CF12-3F24-4853-BF43-7BD815E0B56D} = {2F06B122-3577-41FD-AE31-882A76956608}
+		{023293B3-1BAF-4F7C-866A-64C49BCBE932} = {765E30E9-DAC8-4A55-892D-7734D91E259E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0EACA285-E305-4763-AD79-12326C072BC4}
+	EndGlobalSection
+EndGlobal
