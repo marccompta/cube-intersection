@@ -106,6 +106,39 @@ namespace ShapeCalculations.Application.Impl.Tests.Unit
             }
 
             [Fact]
+            public void WhenIntersectionIsReturned_ThenIntersectionResponseValuesAreProperlyRounded()
+            {
+                // Arrange
+                var cube = new Entity.Shape.Cube(
+                    new Entity.Shape.Point3D(19.199999999999989, 10.269999999999989, 9.999999999999989),
+                    5.400000000000010,
+                    2.149999999999989,
+                    -2.799999999999989);
+
+                var intersectorMock = new Mock<IIntersector<Entity.Shape.Cube, Entity.Shape.Cube>>();
+                intersectorMock.Setup(i => i.GetIntersection(It.IsAny<Entity.Shape.Cube>(), It.IsAny<Entity.Shape.Cube>()))
+                    .Returns(cube);
+
+                var intersectorRegistryMock = new Mock<IIntersectorRegistry>();
+                intersectorRegistryMock.Setup(reg => reg.GetIntersector<Entity.Shape.Cube, Entity.Shape.Cube>())
+                    .Returns(intersectorMock.Object);
+
+                var sut = new IntersectionService(intersectorRegistryMock.Object);
+
+                // Act
+                var result = sut.GetIntersection(_fixture.Create<Cube>(), _fixture.Create<Cube>());
+
+                // Assert
+                result.Intersection.CenterX.Should().Be(19.2);
+                result.Intersection.CenterY.Should().Be(10.27);
+                result.Intersection.CenterZ.Should().Be(10);
+                result.Intersection.SizeX.Should().Be(5.4);
+                result.Intersection.SizeY.Should().Be(2.15);
+                result.Intersection.SizeZ.Should().Be(-2.8);
+                result.Intersect.Should().BeTrue();
+            }
+
+            [Fact]
             public void WhenCorrectInputIsProvidedAndNoIntersectionIsReturned_ThenIntersectionResponseIsProperlyMappedToApplResponse()
             {
                 // Arrange

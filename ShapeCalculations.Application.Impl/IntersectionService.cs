@@ -81,9 +81,15 @@ namespace ShapeCalculations.Application.Impl
 
         #region Private Methods
 
-        private Models.Cube GetApplicationModel(Entity.Shape.Cube cube)
+        private Cube GetApplicationModel(Entity.Shape.Cube cube)
         {
-            return new Cube(cube.Center.X, cube.Center.Y, cube.Center.Z, cube.SizeX, cube.SizeY, cube.SizeZ);
+            return new Cube(
+                Math.Round(cube.Center.X, 2), 
+                Math.Round(cube.Center.Y, 2), 
+                Math.Round(cube.Center.Z, 2), 
+                Math.Round(cube.SizeX, 2), 
+                Math.Round(cube.SizeY, 2), 
+                Math.Round(cube.SizeZ, 2));
         }
 
         #endregion

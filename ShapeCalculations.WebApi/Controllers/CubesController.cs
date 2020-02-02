@@ -35,11 +35,7 @@ namespace ShapeCalculations.WebApi.Controllers
         #region Public Methods
 
         [SwaggerOperation(Summary = "Get the intersection of two cubes", 
-            Description = 
-                "Retrieves the intersection of two non-rotated cubes, if exists.<br>" +
-                "Calculations are done using values of type double, and results are currently not being rounded.<br><br>" +
-                "It means that errors from floating point arithmetic calculus such a value of 6.8999999999999995 " +
-                "instead of 6.9 can be expected.",
+            Description = "Retrieves the intersection of two non-rotated cubes, if exists.",
             Tags = new[] { "Intersection, Cube" })]
         [SwaggerResponse(StatusCodes.Status200OK, "Get Intersection successfully", typeof(GetIntersectionResponse))]
         [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid input data", null)]
