@@ -5,11 +5,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ShapeCalculations.Application.Contracts;
 using ShapeCalculations.Models;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace ShapeCalculations.WebApi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class CubesController : ControllerBase
     {
         #region Fields
@@ -33,8 +34,24 @@ namespace ShapeCalculations.WebApi.Controllers
 
         #region Public Methods
 
+        [SwaggerOperation(Summary = "Get the intersection of two cubes", 
+            Description = 
+                "Retrieves the intersection of two non-rotated cubes, if exists.<br>" +
+                "Calculations are done using values of type double, and results are currently not being rounded.<br><br>" +
+                "It means that errors from floating point arithmetic calculus such a value of 6.8999999999999995 " +
+                "instead of 6.9 can be expected.",
+            Tags = new[] { "Intersection, Cube" })]
+        [SwaggerResponse(StatusCodes.Status200OK, "Get Intersection successfully", typeof(GetIntersectionResponse))]
+        [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid input data", null)]
+        [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal Server Error", null)]
         [HttpGet, Route("{strCubeA}/{strCubeB}/intersection")]
-        public IActionResult GetIntersection([Required] string strCubeA, [Required] string strCubeB)
+        public IActionResult GetIntersection(
+            [Required]
+            [SwaggerParameter("Format: centerX__centerY__centerZ__SizeOfX__SizeOfY__SizeOfZ (notice each underscore is double).<br><br>E.g. (feel free to copy paste it :P):<br>-1.5__-1__1__1.1__1.2__2")]
+                string strCubeA,
+            [Required]
+            [SwaggerParameter("Format: centerX__centerY__centerZ__SizeOfX__SizeOfY__SizeOfZ (notice each underscore is double).<br><br>E.g. (feel free to copy paste it :P):<br>-1.5__-1__1__1.5__2__3")]
+            string strCubeB)
         {
             Cube cubeA;
             Cube cubeB;

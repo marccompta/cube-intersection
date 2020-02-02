@@ -8,7 +8,7 @@ using ShapeCalculations.WebApi.App_Start;
 
 namespace ShapeCalculations.WebApi
 {
-    public class Startup
+    public partial class Startup
     {
         #region Constructor
 
@@ -33,6 +33,7 @@ namespace ShapeCalculations.WebApi
         /// </summary>
         public void ConfigureServices(IServiceCollection services)
         {
+            AddSwagger(services);
             services.AddControllers();
 
             services
@@ -69,6 +70,12 @@ namespace ShapeCalculations.WebApi
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ShapeCalculations API");
             });
         }
 

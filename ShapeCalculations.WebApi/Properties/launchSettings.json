@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "cubes",
+      "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +20,7 @@
     "ShapeCalculations.WebApi": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "intersections",
+      "launchUrl": "api/cubes",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
