@@ -16,7 +16,7 @@ namespace ShapeCalculations.WebApi
                 {
                     Title = "ShapeCalclations API",
                     // Version = "v1.0",
-                    Description = "A sample API with .Core 3.1, Swagger, Swashbuckle.",
+                    Description = "API with .Core 3.1, Swagger and Swashbuckle to perform shape calculation in a 3D space.",
                     Contact = new OpenApiContact() { Name = "Marc Compta", Email = "marc.compta@sunwebgroup.com" },
                     License = new OpenApiLicense() { Name = "MIT", Url = new Uri("https://opensource.org/licenses/MIT") }
                 };

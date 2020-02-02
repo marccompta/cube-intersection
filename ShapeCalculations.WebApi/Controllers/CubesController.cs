@@ -43,10 +43,10 @@ namespace ShapeCalculations.WebApi.Controllers
         [HttpGet, Route("{strCubeA}/{strCubeB}/intersection")]
         public IActionResult GetIntersection(
             [Required]
-            [SwaggerParameter("Format: centerX__centerY__centerZ__SizeOfX__SizeOfY__SizeOfZ (notice each underscore is double).<br><br>E.g. (feel free to copy paste it :P):<br>-1.5__-1__1__1.1__1.2__2")]
+            [SwaggerParameter("Format: centerX__centerY__centerZ__SizeOfX__SizeOfY__SizeOfZ (notice each underscore is double).<br><br>E.g. (you can copy paste it from below):<br>-1.5__-1__1__1.1__1.2__2")]
                 string strCubeA,
             [Required]
-            [SwaggerParameter("Format: centerX__centerY__centerZ__SizeOfX__SizeOfY__SizeOfZ (notice each underscore is double).<br><br>E.g. (feel free to copy paste it :P):<br>-1.5__-1__1__1.5__2__3")]
+            [SwaggerParameter("Format: centerX__centerY__centerZ__SizeOfX__SizeOfY__SizeOfZ (notice each underscore is double).<br><br>E.g. (you can copy paste it from below):<br>-1.5__-1__1__1.5__2__3")]
             string strCubeB)
         {
             Cube cubeA;
