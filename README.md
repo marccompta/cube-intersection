@@ -4,6 +4,14 @@
 
 Technical exercice.
 
+Design and start an application which accepts as input dimensions and coordinates of two cubic objects (considering a 3D space). The application must determine whether the two objects collide and calculate the intersected volume.
+
+It´s not a math exercice, so it is acceptable to consider the two cubes are parallel, so there is no rotation among themselves.
+
+The input coordinates define the center of the cube.
+
+The purpose of this exercice is to define the application design and architecture, focusing on the parts which ensure the correctness, performance and code clarity.
+
 ## Contributors
 
 Coded by Marc Compta Perpiña,  
